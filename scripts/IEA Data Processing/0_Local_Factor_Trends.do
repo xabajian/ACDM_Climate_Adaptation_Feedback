@@ -7,7 +7,7 @@
 11/5/2021
 
 
-What are global trends in emissions factors.
+What are country-level trends in emissions factors.
 %%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%
@@ -103,6 +103,22 @@ sum
 twoway (kdensity trend_elec1) (kdensity trend_of1), ///
 xtitle("Country-Level Trends in Emissions Factors") ///
 legend(order(1 "Electicity" 2 "Other Fuels"))
+
+//counts
+count if trend_of1>0
+count if trend_elec1>0
+
+/*
+Soft min
+*/
+
+replace trend_elec1 = 0 if trend_elec1==.
+replace trend_elec1 = 0 if trend_elec1>0
+replace trend_of1 = 0 if trend_of1==.
+replace trend_of1 = 0 if trend_of1>0
+
+
+
 
 save  "$processedDir/country_level_trends.dta", replace
 
