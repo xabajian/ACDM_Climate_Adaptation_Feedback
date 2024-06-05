@@ -100,6 +100,8 @@ drop _merge*
 
 sum 
 
+count
+
 twoway (kdensity trend_elec1) (kdensity trend_of1), ///
 xtitle("Country-Level Trends in Emissions Factors") ///
 legend(order(1 "Electicity" 2 "Other Fuels"))
