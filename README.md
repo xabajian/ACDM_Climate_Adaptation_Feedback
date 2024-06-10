@@ -1,8 +1,8 @@
-# Abajian, Carleton, Meng, and Deschenes
+# Abajian, Carleton, Meng, and Deschenes (ACMD 2024)
 
-Read me file accompanying “The Climate Adaptation Feedback”.
+Read me file accompanying the scripts required to replicate findings in the main text and supplementary information for “The Climate Adaptation Feedback” (ACMD 2024).
 
-
+Replication files for the peer review responses are available from xander.abajian@gmail.com on request.
 
 
 ## Requirements
