@@ -172,7 +172,7 @@ The Stata scripts all contain numerical prefixes. These prefixes roughly denote 
 - `Appendix_dynamic_CAF` — aggregates them globally and resolves the dynamic CAF.
 
 
-# Data Descriptions Accompanying “The Climate Adaptation Feedback” Data Repo
+# Data Description for the Data Repo
 
 
 
