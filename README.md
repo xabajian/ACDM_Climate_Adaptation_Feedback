@@ -187,16 +187,16 @@ This is a brief description of the six folders contained in the Zenodo repositor
 
 Raw objects used as inputs into calculating the CAF.
 
-1. `no_adapt` Objects used to calculate the no extensive marign CAF in the appendix
-2. `population` Impact-region level populations from Rode et al.
-3. `RCPs` Datasets containing time series of GMST predictions from the GCMs used by Rode et al (2021) as well as time series of cumulative emissions under RCP 4.5 and 8.5 from the RCP Database (Version 2.0.4) at http://www.iiasa.ac.at/web-apps/tnt/RcpDb 
-4. `uncertainty_9_12` Projections of mean and 5-95 confidence intervals for country-level adaptive energy demand from Rode et al (2021).
+1. `no_adapt`: Objects used to calculate the no extensive marign CAF in the appendix
+2. `population`:  Impact-region level populations from Rode et al.
+3. `RCPs`:  Datasets containing time series of GMST predictions from the GCMs used by Rode et al (2021) as well as time series of cumulative emissions under RCP 4.5 and 8.5 from the RCP Database (Version 2.0.4) at `http://www.iiasa.ac.at/web-apps/tnt/RcpDb `. 
+4. `uncertainty_9_12`:  Projections of mean and 5-95 confidence intervals for country-level adaptive energy demand from Rode et al (2021).
 
 
 ## NDCs:
 
 
-Contains raw data on nationally determined contributions and baseline emissions forecasts from Meinhaussen et al 2022 as well as conversions to STATA’s data format (.dta)
+Contains raw data on nationally determined contributions and baseline emissions forecasts from [Meinhaussen et al. 2022] (https://doi.org/10.1038/s41586-022-04553-z) as well as conversions to STATA’s data format (.dta). The country-level data are taken from `https://zenodo.org/records/6383612`.
 
 ## Figures:
 
