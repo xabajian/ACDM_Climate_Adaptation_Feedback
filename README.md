@@ -133,7 +133,9 @@ Raw objects used as inputs into calculating the CAF.
 2. `population` Impact-region level populations from Rode et al.
 3. `RCPs` Datasets containing time series of GMST predictions from the GCMs used by Rode et al (2021) as well as time series of cumulative emissions under RCP 4.5 and 8.5 from the RCP Database (Version 2.0.4) at http://www.iiasa.ac.at/web-apps/tnt/RcpDb 
 4. `uncertainty_9_12` Projections of mean and 5-95 confidence intervals for country-level adaptive energy demand from Rode et al (2021).
-5. 
+
+
+   
 ## Figures:
 
 
