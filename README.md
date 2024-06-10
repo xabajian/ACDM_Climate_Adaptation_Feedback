@@ -1,4 +1,4 @@
-# Alexander C Abajian, Tamma Carleton, Kyle Meng, and Olivier Deschenes
+# Abajian, Carleton, Meng, and Deschenes
 Read me file accompanying “The Climate Adaptation Feedback” GitHub Scripts 
 6/10/2024
 
