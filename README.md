@@ -11,7 +11,6 @@ All programs run in the following versions of these applications:
 
 * Stata: Stata/SE 18.0 for Mac (Apple Silicon)
 * R: RStudio 2022.12.0+353 
-* Matlab: R2022b
 
 Running the R scripts requires that the following packages are installed:
 
@@ -36,7 +35,6 @@ Running the R scripts requires that the following packages are installed:
     │   ├── 0_National_emissions_shares_2019_Minx_GHG.do
     │   ├── 0_Read_IR_Populations.do
     │   ├── 0_Read_ISO3_Populations.do
-    │   ├── 0_Read_rode_data_no_adapt.m
     │   ├── 0_Read_rode_data_noadapt.do
     │   ├── 0_Read_rode_data_uncertainty.do
     │   ├── 0_Read_rode_data_uncertainty_Decay.do
