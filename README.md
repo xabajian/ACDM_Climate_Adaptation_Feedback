@@ -30,56 +30,56 @@ Running the R scripts requires that the following packages are installed:
 
 # File Tree 
 
-├── README.md
-└── scripts
-    ├── CAF Scripts Final
-    │   ├── 0_National_emissions_shares_2019_Minx_GHG.do
-    │   ├── 0_Read_IR_Populations.do
-    │   ├── 0_Read_ISO3_Populations.do
-    │   ├── 0_Read_rode_data_no_adapt.m
-    │   ├── 0_Read_rode_data_noadapt.do
-    │   ├── 0_Read_rode_data_uncertainty.do
-    │   ├── 0_Read_rode_data_uncertainty_Decay.do
-    │   ├── 0_Read_rode_data_uncertainty_Decay_country_level.do
-    │   ├── 1_TCRE_analogue.do
-    │   ├── 2_CAF_Calculation.do
-    │   ├── 2_CAF_Calculation_Decay.do
-    │   ├── 2_CAF_Calculation_Decay_Country_Level.do
-    │   ├── 2_CAF_Calculation_Decay_Country_Level_Monte_Carlo.do
-    │   ├── 2_CAF_Calculation_noadapt.do
-    │   ├── 2_CAF_Decomp.do
-    │   ├── 3_Covariates_for_NDCgaps.do
-    │   ├── 3_Covariates_for_NDCgaps_alt.do
-    │   ├── 3_NDC_gaps.do
-    │   ├── 4_CAF Damages
-    │   │   ├── CAF_avoided_damages.do
-    │   │   ├── integration_damage_function_coefficients.csv
-    │   │   └── ssp2_growth.csv
-    │   ├── Appendix_dynamic_CAF.do
-    │   ├── Appendix_dynamic_CAF_makeIRFS.do
-    │   ├── Figures
-    │   │   ├── Fig1_schematic
-    │   │   │   └── CAF_components.R
-    │   │   ├── GMST_history.do
-    │   │   ├── combined_3.gph
-    │   │   ├── figure2_TCRE.do
-    │   │   ├── figure2_cumulative_emissions.do
-    │   │   ├── figure2_intensity_maps.do
-    │   │   ├── figure3.do
-    │   │   ├── figure4.do
-    │   │   ├── figure4_LOO.do
-    │   │   └── figure4_alt.do
-    │   └── Robustness_coverage_checking.do
-    └── IEA Data Processing
-        ├── 0_Check_Global_Factors.do
-        ├── 0_Check_otherfuels_emissions_factors.do
-        ├── 0_Emissions_Factors_dofile.do
-        ├── 0_Factors_Quantities_Merge.do
-        ├── 0_Global_Factor_Trends.do
-        ├── 0_Local_Factor_Trends.do
-        ├── 0_product_name_crosswalks.xlsx
-        ├── factor_maps.R
-        └── factor_maps_imputed.R
+-  README.md
+-  scripts
+    -  CAF Scripts Final
+   -   -  0_National_emissions_shares_2019_Minx_GHG.do
+   -   -  0_Read_IR_Populations.do
+   -   -  0_Read_ISO3_Populations.do
+   -   -  0_Read_rode_data_no_adapt.m
+   -   -  0_Read_rode_data_noadapt.do
+   -   -  0_Read_rode_data_uncertainty.do
+   -   -  0_Read_rode_data_uncertainty_Decay.do
+   -   -  0_Read_rode_data_uncertainty_Decay_country_level.do
+   -   -  1_TCRE_analogue.do
+   -   -  2_CAF_Calculation.do
+   -   -  2_CAF_Calculation_Decay.do
+   -   -  2_CAF_Calculation_Decay_Country_Level.do
+   -   -  2_CAF_Calculation_Decay_Country_Level_Monte_Carlo.do
+   -   -  2_CAF_Calculation_noadapt.do
+   -   -  2_CAF_Decomp.do
+   -   -  3_Covariates_for_NDCgaps.do
+   -   -  3_Covariates_for_NDCgaps_alt.do
+   -   -  3_NDC_gaps.do
+   -   -  4_CAF Damages
+   -  -   -  CAF_avoided_damages.do
+   -  -   -  integration_damage_function_coefficients.csv
+   -  -   -  ssp2_growth.csv
+   -   -  Appendix_dynamic_CAF.do
+   -   -  Appendix_dynamic_CAF_makeIRFS.do
+   -   -  Figures
+   -  -   -  Fig1_schematic
+   -  -  -   -  CAF_components.R
+   -  -   -  GMST_history.do
+   -  -   -  combined_3.gph
+   -  -   -  figure2_TCRE.do
+   -  -   -  figure2_cumulative_emissions.do
+   -  -   -  figure2_intensity_maps.do
+   -  -   -  figure3.do
+   -  -   -  figure4.do
+   -  -   -  figure4_LOO.do
+   -  -   -  figure4_alt.do
+   -   -  Robustness_coverage_checking.do
+    -  IEA Data Processing
+        -  0_Check_Global_Factors.do
+        -  0_Check_otherfuels_emissions_factors.do
+        -  0_Emissions_Factors_dofile.do
+        -  0_Factors_Quantities_Merge.do
+        -  0_Global_Factor_Trends.do
+        -  0_Local_Factor_Trends.do
+        -  0_product_name_crosswalks.xlsx
+        -  factor_maps.R
+        -  factor_maps_imputed.R
 
 
 
