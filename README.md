@@ -203,7 +203,7 @@ Contains various intermediate inputs to the CAF that are not per-se processed bu
 - `essd_ghg_data` : Copernicus historical GHG emissions Data
 - `rcp45_global` and `rcp85_global` : time series of cumulative emissions under RCP 4.5 and 8.5 from the RCP Database (Version 2.0.4) at `http://www.iiasa.ac.at/web-apps/tnt/RcpDb `. 
 
-## Figures:
+## Figures
 
 
 Folder where all intermediate files and PDFs for figures in the manuscript and supplementary information sections of the paper are stored
