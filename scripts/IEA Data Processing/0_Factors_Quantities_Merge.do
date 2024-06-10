@@ -56,21 +56,29 @@ Module to allow this code to be run in an adaptive nature from any terminal
 
 
 
-
-
-
 //set file paths
 cd ~/Dropbox/adaptation_multiplier_data
 	
 	
-//global project_name "adaptation_multiplier" //enter project name here
+
 
 //data folders 
 global startDir "/Users/xabajian/Dropbox/adaptation_multiplier_data"
-global rawDir "$startDir/rawData"
-global processedDir "$startDir/processedData"
-global tempDir "$startDir/temp"
-//global logsDir "$startDir/data/logs"
+global rawDir "$startDir/rawData_local"
+global processedDir "$startDir/processedData_local"
+global tempDir "$startDir/temp_local"
+
+
+// //set file paths
+// global root "STARTING_CAF_DIRECTORY"
+// cd $root 
+//
+// //data folders 
+// global rawDir "$root/rawData"
+// global processedDir "$root/processedData"
+// global tempDir "$root/temp"
+
+
 
 //repository paths
 /*

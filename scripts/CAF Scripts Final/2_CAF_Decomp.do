@@ -9,10 +9,6 @@
 		
 
 /*
-Alexander Abajian
-
-3/16/2023
-
 Decomposition exercise under SSP2-RCP85
 */
 
@@ -21,8 +17,9 @@ Decomposition exercise under SSP2-RCP85
 
 
 //set file paths
-cd "/Volumes/ext_drive/uncertainty_8_12_22"
-global root "/Volumes/ext_drive/uncertainty_8_12_22"
+
+global root "STARTING_CAF_DIRECTORY"
+cd $root 
 global processed "$root/processed"
 global temp "$root/temporary"
 global raw "$root/raw"

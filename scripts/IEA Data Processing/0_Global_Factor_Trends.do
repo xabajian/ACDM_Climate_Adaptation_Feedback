@@ -14,20 +14,27 @@ What are global trends in emissions factors.
 */
 
 
-
-
-
-
 //set file paths
 cd ~/Dropbox/adaptation_multiplier_data
 	
 	
+
 
 //data folders 
 global startDir "/Users/xabajian/Dropbox/adaptation_multiplier_data"
 global rawDir "$startDir/rawData_local"
 global processedDir "$startDir/processedData_local"
 global tempDir "$startDir/temp_local"
+
+
+// //set file paths
+// global root "STARTING_CAF_DIRECTORY"
+// cd $root 
+//
+// //data folders 
+// global rawDir "$root/rawData"
+// global processedDir "$root/processedData"
+// global tempDir "$root/temp"
 
 
 use "$processedDir/country_year_emissions_factor.dta", clear

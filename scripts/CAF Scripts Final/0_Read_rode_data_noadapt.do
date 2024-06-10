@@ -18,21 +18,15 @@ Each file will give one of the mean, 5 or 95th quantile across rcp/ssp/iam level
 
 
 //set file paths
-cd "/Volumes/ext_drive/uncertainty_8_12_22"
-global root "/Volumes/ext_drive/uncertainty_8_12_22"
+
+global root "STARTING_CAF_DIRECTORY"
+cd $root 
 global processed "$root/processed"
 global temp "$root/temporary"
 global raw "$root/raw"
 global no_adapt "$root/raw/no_adapt"
 
 
-
-
-
-/*
-
-
-*/
 
 
 	

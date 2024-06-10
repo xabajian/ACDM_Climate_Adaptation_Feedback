@@ -9,28 +9,14 @@
 		
 
 /*
-Alexander Abajian
-
-5/31/2022
-
 Create the cumulative change in emissions from adaptation assuming feedbacks to temperature each period
 */
 
 
 
-
 //set file paths
-// cd "/Volumes/ext_drive/Results/
-// global root "/Volumes/ext_drive"
-// global csv "$root/Results/csv"
-// global processed "$root/Results/processed"
-// global objects "$root/objects"
-// //global forkyle "$root/for_kcm"
-//
-
-//set file paths
-cd "/Volumes/ext_drive/uncertainty_8_12_22"
-global root "/Volumes/ext_drive/uncertainty_8_12_22"
+global root "STARTING_CAF_DIRECTORY"
+cd $root 
 global processed "$root/processed"
 global temp "$root/temporary"
 global raw "$root/raw"

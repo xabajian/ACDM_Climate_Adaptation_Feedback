@@ -12,15 +12,16 @@
 Read in global emissions and temperature time series.
 Read in updated impact-region level files containing mean and 5-95qtile damages for both fuels.
 Each file read in gives means as well as 90% CIs across rcp/ssp/iam level scenarios
-Combine to create CAF
+Combine to create CAF accounting for globally decaying factors.
 */
 
 
 
 
 //set file paths
-cd "/Volumes/ext_drive/uncertainty_8_12_22"
-global root "/Volumes/ext_drive/uncertainty_8_12_22"
+
+global root "STARTING_CAF_DIRECTORY"
+cd $root 
 global processed "$root/processed"
 global temp "$root/temporary"
 global raw "$root/raw"

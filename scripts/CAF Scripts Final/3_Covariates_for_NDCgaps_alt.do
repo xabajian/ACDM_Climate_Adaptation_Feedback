@@ -9,18 +9,16 @@
 		
 
 /*
-cross section dataset
+3-- cross section dataset for NDC gaps
 */
 
 
 
 
 
-
 //set file paths
-
-cd "/Volumes/ext_drive/uncertainty_8_12_22"
-global root "/Volumes/ext_drive/uncertainty_8_12_22"
+global root "STARTING_CAF_DIRECTORY"
+cd $root 
 global processed "$root/processed"
 global temp "$root/temporary"
 global raw "$root/raw"
@@ -45,9 +43,7 @@ Step 1: Create country-level TS of covariates from Rode
 
 
 use "$processed/damages_panel.dta", clear
-
-
-			
+		
 
 //totals through 2099
 collapse (sum) emissions , by(ISO3 rcp ssp  ssp_level fuel)

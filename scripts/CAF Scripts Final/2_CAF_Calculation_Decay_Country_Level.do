@@ -12,18 +12,19 @@
 Read in global emissions and temperature time series.
 Read in updated impact-region level files containing mean and 5-95qtile damages for both fuels.
 Each file read in gives means as well as 90% CIs across rcp/ssp/iam level scenarios
-Combine to create CAF
+Combine to create CAF with country-level decay factors
 */
 
 
 
-
 //set file paths
-cd "/Volumes/ext_drive/uncertainty_8_12_22"
-global root "/Volumes/ext_drive/uncertainty_8_12_22"
+
+global root "STARTING_CAF_DIRECTORY"
+cd $root 
 global processed "$root/processed"
 global temp "$root/temporary"
 global raw "$root/raw"
+global figures "$root/figures"
 
 
 
@@ -321,11 +322,31 @@ Summary stats
 
 
 sum Adaptation_Feedback if year==2099 & rcp=="rcp85" & ssp=="SSP2"
-// -1.09e+08 
+// -.0773232 
  
 sum Adaptation_Feedback if year==2099 & rcp=="rcp45" & ssp=="SSP2"
-//   -4.49e+07
+// -.0469373  
+
+rename Adaptation_Feedback AF_factors
 
 sort year
-twoway (line Adaptation_Feedback year if rcp=="rcp85" & ssp=="SSP2" & ssp_level=="high")
+
+
+keep if rcp=="rcp85" & ssp=="SSP2" & ssp_level=="high" 
+
+merge 1:1 year using  "$processed/bl_caf.dta"
+
+
+label var year "Year"
+
+
+twoway ///
+(line AF_factors year if rcp=="rcp85" & ssp=="SSP2" & ssp_level=="high",  lcolor(black) )  ///
+(line Adaptation_Feedback year if rcp=="rcp85" & ssp=="SSP2" & ssp_level=="high",  lcolor(gray%50) lpattern(dash) ), ///
+ylabel(-.14(0.02)0) ytitle( "Adaptation Feedback, Degrees C") ///
+legend(order(1 "CAF point estimate" "(w/ country-specific"  "decaying factors)" 2 "CAF point estimate" "(benchmark)" )) 
+
+
+ graph export $figures/CAF_Country_Level_Softmax.png, as(png) name("Graph") replace
+
  

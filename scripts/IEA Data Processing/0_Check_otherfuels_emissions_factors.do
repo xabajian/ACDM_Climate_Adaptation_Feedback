@@ -7,23 +7,27 @@
 	set maxvar 32000
 		
 
-
 //set file paths
-//cd ~/Dropbox/adaptation_multiplier_data
+cd ~/Dropbox/adaptation_multiplier_data
 	
-//Main folder
-//global startDir "/Users/kylemeng/Dropbox/work/research/adaptation_multiplier"
-global startDir "/Users/xabajian/Dropbox"
+	
 
 
-//Data folders 
-global rawDir "$startDir/adaptation_multiplier_data/rawData"
-global processedDir "$startDir/adaptation_multiplier_data/processedData"
-global tempDir "$startDir/adaptation_multiplier_data/temp"
+//data folders 
+global startDir "/Users/xabajian/Dropbox/adaptation_multiplier_data"
+global rawDir "$startDir/rawData_local"
+global processedDir "$startDir/processedData_local"
+global tempDir "$startDir/temp_local"
 
-//Repository dolers
-global tablesDir "$startDir/adaptation_multiplier_repo/tables"
-global figuresDir "$startDir/adaptation_multiplier_repo/figures"
+
+// //set file paths
+// global root "STARTING_CAF_DIRECTORY"
+// cd $root 
+//
+// //data folders 
+// global rawDir "$root/rawData"
+// global processedDir "$root/processedData"
+// global tempDir "$root/temp"
 
 
 /*%%%%%%%%%%%%%%%%%%%%%% MAIN %%%%%%%%%%%%%%%%%%%%%%*/

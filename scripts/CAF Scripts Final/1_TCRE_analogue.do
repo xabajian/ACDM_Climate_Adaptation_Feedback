@@ -9,31 +9,16 @@
 		
 
 /*
-Alexander Abajian
-
-5/17/2022
 
 Create a mapping between the RCP 8.5 concentration time samples with a time series of emissions
 
 */
 
 
-
-
-//set file paths OLD
-
-// cd "/Volumes/ext_drive/Results/
-// global root "/Volumes/ext_drive"
-// global csv "$root/Results/csv"
-// global processed "$root/Results/processed"
-// global objects "$root/objects"
-// global processed "$root/for_kcm"
-//
-
-
 //set file paths
-cd "/Volumes/ext_drive/uncertainty_8_12_22"
-global root "/Volumes/ext_drive/uncertainty_8_12_22"
+
+global root "STARTING_CAF_DIRECTORY"
+cd $root 
 global processed "$root/processed"
 global temp "$root/temporary"
 global raw "$root/raw"

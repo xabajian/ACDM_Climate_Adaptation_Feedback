@@ -19,8 +19,8 @@ Combine to create CAF
 
 
 //set file paths
-cd "/Volumes/ext_drive/uncertainty_8_12_22"
-global root "/Volumes/ext_drive/uncertainty_8_12_22"
+global root "STARTING_CAF_DIRECTORY"
+cd $root 
 global processed "$root/processed"
 global temp "$root/temporary"
 global raw "$root/raw"
@@ -365,6 +365,28 @@ kick out
 save "$processed/CAF_by_scenario.dta", replace 
 
 restore
+
+
+
+
+/*
+%%%%%%%%%%%%%%%%%%%%%%
+kick out for 
+%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+
+preserve
+
+keep if rcp=="rcp85" & ssp=="SSP2" & ssp_level=="high"
+ 
+keep Adaptation_Feedback year 
+
+
+save "$processed/bl_caf.dta", replace 
+
+restore
+
 
 
 

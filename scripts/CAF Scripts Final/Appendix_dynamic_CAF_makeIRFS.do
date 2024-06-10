@@ -9,9 +9,6 @@
 		
 
 /*
-Alexander Abajian
-
-2/8/2021
 
 This script generates the country-year impulse response functions by fuel and for both fuels combined. 
 
@@ -51,8 +48,8 @@ clear all
 
 
 //set file paths
-cd "/Volumes/ext_drive/uncertainty_8_12_22"
-global root "/Volumes/ext_drive/uncertainty_8_12_22"
+global root "STARTING_CAF_DIRECTORY"
+cd $root 
 global processed "$root/processed"
 global temp "$root/temporary"
 global raw "$root/raw"
