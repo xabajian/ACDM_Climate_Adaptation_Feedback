@@ -101,7 +101,7 @@ The Stata scripts all contain numerical prefixes. These prefixes roughly denote 
 
 
 
-### used
+#### used
 - `0_Emissions_Factors_dofile` — solve for country-level fuel-specific average emissions factors between 2010-2018 through the process outlined in section 5.2 of the manuscript.
 - `0_Factors_Quantities_Merge` — merge fuel-specific factors and quantities each country consumes to form weighted averages (equation 5 in section 5.2)
 - `0_National_emissions_shares_2019_Minx_GHG` — load in country-level time series for emissions
@@ -109,7 +109,7 @@ The Stata scripts all contain numerical prefixes. These prefixes roughly denote 
 - `0_Read_ISO3_Populations` — load ISO3 (country) level populations from Rode et al 2021
 - `0_Read_rode_data_uncertainty` — Read in scenario level point estimates and 5-95 CIs from Rode et al for adaptive energy use under each SSP-RCP scenario we consider. This effectively fetches each element of equation (2) in the methods section we need to construct the CAF.
 
-### unused
+#### unused
 - `0_Read_rode_data_uncertainty_Decay` — reformulate `0_Read_rode_data_uncertainty’ above with global decay rates for emissions factors
 - `0_Read_rode_data_uncertainty_Decay_country_level` — reformulate `0_Read_rode_data_uncertainty’ with country-level decay rates for emissions factors
 - `0_Check_otherfuels_emissions_factors` — examine the degree to which outliers/other data issues are affecting our factor values (see SI)
@@ -122,16 +122,16 @@ The Stata scripts all contain numerical prefixes. These prefixes roughly denote 
 
 ## Section 1 —  Solve for Our Modified Analogue of the TCRE that measures how historical carbon emissions have translated to changes in GMST
 
-### used
+#### used
 - `1_TCRE_analogue.do` — Solves for our beta on changes in cumulative carbon emissions. This performs the procedure in Methods Section 5.3 by estimating equation 6.
 
 ## Section 2 - CAF calculations and sensitivity analysis
 
-###  used
+####  used
 - `2_CAF_Calculation` — solves for our central CAF estimates in the manuscript. Evaluates equations 3 and 4 in the methods section 5.1 given inputs as constructed above.
 - `2_CAF_Decomp` — decomposes CAF between the contributions by each fuel type to inform the graphics in Figure 3.
 
-### unused
+#### unused
 - `2_CAF_Calculation_Decay` — solves for the CAF with global decay rates for each emissions factor
 - `2_CAF_Calculation_Decay_Country_Level`— solves for the CAF with local decay rates for each emissions factor
 - `2_CAF_Calculation_Decay_Country_Level_Monte_Carlo` — sensitivity analysis for emissions factors
@@ -139,14 +139,14 @@ The Stata scripts all contain numerical prefixes. These prefixes roughly denote 
 
 ## Section 3 - CAF in the context of NDCs
 
-### used
+#### used
 - `3_NDC_gaps` — Solves for the NDC gaps we reference in text as described in the "Baseline country-level emissions and Nationally Determined Contributions” paragraph of 5.2.
 - `3_Covariates_for_NDCgaps` — Solves for country-level covariates at various horizons to use to inform the NDC gap analysis
 - `3_Covariates_for_NDCgaps_alt` — Repeats the exercise above by fuel.
 
 ## Section 4 - Solves for the monetized value of damages using outputs from the DSCIM model
 
-### used
+#### used
 - `CAF_avoided_damages` — Solves for NPV of damages avoided through 2099 under all SSP-RCP scenarios
 - `integration_damage_function_coefficients` -- Damage funciton coefficients from the DSCIM model
 - `ssp2_growth` -- GDP growth under SSP2
@@ -154,7 +154,7 @@ The Stata scripts all contain numerical prefixes. These prefixes roughly denote 
   
 ## Figures
 
-### used
+#### used
 - `Fig1_schematic` — Figure 1
 - `figure2_cumulative_emissions` — Figure 2: Cumulative Emissions Time Series
 - `figure2_intensity_maps` —Figure 2:  Maps of emissions intensities
@@ -163,7 +163,7 @@ The Stata scripts all contain numerical prefixes. These prefixes roughly denote 
 - `figure4` — Figure 4
 
 
-### not used
+#### not used
 - `figure4_alt` (SI Section 1)
 - `figure4_LOO` (SI section 5)
 
