@@ -1,0 +1,12 @@
+
+# History files
+scripts/.Rhistory
+scripts/.Rapp.history
+
+# Session Data files
+scripts/.RData
+scripts/.RDataTmp
+
+
+scripts/_README_scripts.rtf
+
