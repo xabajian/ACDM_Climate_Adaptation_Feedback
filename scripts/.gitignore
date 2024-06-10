@@ -1,11 +1,12 @@
-data/
-results/
 
 # History files
-.Rhistory
-.Rapp.history
+scripts/.Rhistory
+scripts/.Rapp.history
 
 # Session Data files
-.RData
-.RDataTmp
+scripts/.RData
+scripts/.RDataTmp
+
+
+scripts/_README_scripts.rtf
 
