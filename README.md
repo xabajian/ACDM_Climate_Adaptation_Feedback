@@ -10,7 +10,6 @@ All programs run in the following versions of these applications:
 
 * Stata: Stata/SE 18.0 for Mac (Apple Silicon)
 * R: RStudio 2022.12.0+353 
-* Python: Python 3.11.1 64bit for Mac
 * Matlab: R2022b
 
 Running the R scripts requires that the following packages are installed:
@@ -27,6 +26,7 @@ Running the R scripts requires that the following packages are installed:
 * biscale=1.0.0
 * dichromat=2.0-0.1
 * geosphere=1.5-18
+
 
 
 # Description of Scripts to Replicate our Analysis
