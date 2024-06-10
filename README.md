@@ -124,7 +124,7 @@ The Stata scripts all contain numerical prefixes. These prefixes roughly denote 
 
 
 
-This is a brief description of the six folders contained in the Zenodo repository for the CAF paper. 
+This is a brief description of the six folders contained in the Zenodo repository for the CAF paper. Each of these folders must exist for all code to run
 
 
 
@@ -139,17 +139,16 @@ Raw objects used as inputs into calculating the CAF.
 4. `uncertainty_9_12` Projections of mean and 5-95 confidence intervals for country-level adaptive energy demand from Rode et al (2021).
 
 
-   
-## Figures:
-
-
-Contains intermediate files and PDFs of all figures in the manuscript and supplementary information sections of the paper.
-
-
 ## NDCs:
 
 
 Contains raw data on nationally determined contributions and baseline emissions forecasts from Meinhaussen et al 2022 as well as conversions to STATA’s data format (.dta)
+
+## Figures:
+
+
+Folder where all intermediate files and PDFs for figures in the manuscript and supplementary information sections of the paper are stored
+
 
 
 ## Objects
