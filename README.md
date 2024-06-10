@@ -70,7 +70,7 @@ The Stata scripts all contain numerical prefixes. These prefixes roughly denote 
 ### used
 - `1_TCRE_analogue.do` — Solves for our beta on changes in cumulative carbon emissions. This performs the procedure in Methods Section 5.3 by estimating equation 6.
 
-## Section 2
+## Section 2 - CAF calculations and sensitivity analysis
 
 ###  used
 - `2_CAF_Calculation` — solves for our central CAF estimates in the manuscript. Evaluates equations 3 and 4 in the methods section 5.1 given inputs as constructed above.
@@ -82,18 +82,21 @@ The Stata scripts all contain numerical prefixes. These prefixes roughly denote 
 - `2_CAF_Calculation_Decay_Country_Level_Monte_Carlo` — sensitivity analysis for emissions factors
 - `2_CAF_Calculation_noadapt` — Solves for CAF when extensive margin for adaptation is excluded (see SI)
 
-## Section 3
+## Section 3 - CAF in the context of NDCs
 
 ### used
 - `3_NDC_gaps` — Solves for the NDC gaps we reference in text as described in the "Baseline country-level emissions and Nationally Determined Contributions” paragraph of 5.2.
 - `3_Covariates_for_NDCgaps` — Solves for country-level covariates at various horizons to use to inform the NDC gap analysis
 - `3_Covariates_for_NDCgaps_alt` — Repeats the exercise above by fuel.
 
-## Section 4
+## Section 4 - Solves for the monetized value of damages using outputs from the DSCIM model
 
 ### used
-- `CAF_avoided_damages` — solves for NPV of damages avoided through 2099 under all SSP-RCP scenarios
+- `CAF_avoided_damages` — Solves for NPV of damages avoided through 2099 under all SSP-RCP scenarios
+- `integration_damage_function_coefficients` -- Damage funciton coefficients from the DSCIM model
+- `ssp2_growth` -- GDP growth under SSP2
 
+  
 ## Figures
 
 ### used
