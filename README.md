@@ -13,7 +13,7 @@ All programs run in the following versions of these applications:
 * Python: Python 3.11.1 64bit for Mac
 * Matlab: R2022b
 
-Running the R scripts requires the following:
+Running the R scripts requires that the following packages are installed:
 
 * tidyverse=2.0.0
 * haven=2.5.2
