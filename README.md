@@ -1,6 +1,7 @@
 # Abajian, Carleton, Meng, and Deschenes
-Read me file accompanying “The Climate Adaptation Feedback” GitHub Scripts 
-6/10/2024
+
+Read me file accompanying “The Climate Adaptation Feedback”.
+
 
 
 
