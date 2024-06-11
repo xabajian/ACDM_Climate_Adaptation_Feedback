@@ -89,7 +89,7 @@ To run the Stata scripts that are not related to processing the proprietary IEA 
 
 Stata scripts related to processing the IEA data are present and may be reviewed, but will ultimately not run without access to the IEA’s world energy balances and emissions databases.
 
-To run the python, Matlab, or R scripts, more directory manipulation may be needed depending on how a replicator has configured their environment.  In principle both should also run out of a correct configuration which sets the Zenodo folder as a root directory.
+To run the R scripts, more directory manipulation may be needed depending on how a replicator has configured their environment.  In principle both should also run out of a correct configuration which sets the Zenodo folder as a root directory.
 
 The replication scripts are separated into two folders (as suggested above): IEA Data Processing and CAF Scripts Final. They (respectively) contain the scripts which process data from the IEA to form emissions factors (section 5.2 equation 5) and run our analysis of how energy demand feeds back into climate change. 
 
