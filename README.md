@@ -6,7 +6,7 @@ Replication files for the peer review responses are available from xander.abajia
 
 ## Setup
 
-Scripts in this repository are written in a combination of Stata and R. Throughout this document, it is assumed that the replicator operates from a working directory containing all the necessary files and folders detailed in the structure below. Most importantly, a replicator must download the associated data repository from Zenodo at [https://doi.org/10.5281/zenodo.10476310.](https://doi.org/10.5281/zenodo.10476310).
+Scripts in this repository are written in a combination of Stata and R. Throughout this document, it is assumed that the replicator operates from a working directory containing all the necessary files and folders detailed in the structure below. Most importantly, a replicator must download the associated data repository from Zenodo at [https://doi.org/10.5281/zenodo.10476310.](https://doi.org/10.5281/zenodo.10476310)
 
 ## Requirements
 
@@ -15,7 +15,7 @@ All programs are run in the following versions of these applications:
 * Stata: Stata/SE 18.0 for Mac 
 * R: R version 4.2.3
 
-and were executed on Mac OS 14.5 (Sonoma -- 23F79).
+and were executed on Mac OS 14.5 (Sonoma -- 23F79). Programs must be run in the order in which they appear in the directory. Running all files associated with the main manuscript takes 5-10 minutes in total on an average laptop. Running the dynamic CAF exercise in the appendix (which generates the impulse response functions) takes a bit longer depending on the computer you're running as it runs quite a few regressions. Running the Monte Carlo simulations and other exercises for the peer review process might take overnight.
 
 Running the Stata scripts requires
 
