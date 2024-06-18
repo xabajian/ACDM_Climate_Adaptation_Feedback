@@ -7,10 +7,13 @@ Replication files for the peer review responses are available from xander.abajia
 
 ## Requirements
 
-All programs run in the following versions of these applications:
+All programs are run in the following versions of these applications:
 
-* Stata: Stata/SE 18.0 for Mac (Apple Silicon)
-* R: RStudio 2022.12.0+353 
+* Stata: Stata/SE 18.0 for Mac 
+* R: RStudio 2022.12.0+353
+
+and were executed on Mac OS 14.5 (23F79).
+
 
 Running the R scripts requires that the following packages are installed:
 
