@@ -47,16 +47,6 @@ global processedDir "$startDir/processedData_local"
 global tempDir "$startDir/temp_local"
 
 
-// //set file paths
-// global root "STARTING_CAF_DIRECTORY"
-// cd $root 
-//
-// //data folders 
-// global rawDir "$root/rawData"
-// global processedDir "$root/processedData"
-// global tempDir "$root/temp"
-
-
 //repository paths
 /*
 global tablesDir "$startDir/repo/tables"

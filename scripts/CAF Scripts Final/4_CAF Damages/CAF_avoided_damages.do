@@ -20,12 +20,19 @@ The Data-driven Spatial Climate Impact Model (DSCIM) to calculate the welfare ga
 
 
 //set file paths
-global root "STARTING_CAF_DIRECTORY"
+//global root "{FILEPATH INTO ACDM_Data from ZENODO}"
+global root "/Volumes/ext_drive/ACDM_Data"
 cd $root 
 global processed "$root/processed"
 global temp "$root/temporary"
 global raw "$root/raw"
-global damages "/Volumes/ext_drive/CAF Scripts Final/4_CAF Damages"
+global objects "$root/objects"
+global figures "$root/figures"
+global NDCs  "$root/NDCs"
+
+//SET this to the location of the folder is't 
+//global damages "{~/GitHub/ACDM_Climate_Adaptation_Feedback/scripts/CAF Scripts Final/4_CAF Damages}"
+global damages "/Users/xabajian/Documents/GitHub/ACDM_Climate_Adaptation_Feedback/scripts/CAF Scripts Final/4_CAF Damages"
 
 /*
 Seciton 0 -- read in relevant 
@@ -33,10 +40,17 @@ Seciton 0 -- read in relevant
 cd  "$damages"
 
 
-//make CAF temp series
+//read CAF temp series
 use "$processed/CAF_by_scenario_full.dta", clear
+
+/*pick RCP*/
 //keep if  ssp=="SSP2" & rcp=="rcp85"
 keep if  ssp=="SSP2" & rcp=="rcp45"
+
+/*end options for RCP*/
+
+
+
 keep year Adaptation_Feedback dT_Cumulative temp temp_0 gcm_temp_adapt
 collapse Adaptation_Feedback dT_Cumulative temp temp_0 gcm_temp_adapt , by(year)
 save "CAF_series.dta", replace

@@ -17,14 +17,18 @@ Combine to create CAF with no adaptation
 
 
 
+
+
 //set file paths
-global root "STARTING_CAF_DIRECTORY"
+//global root "{FILEPATH INTO ACDM_Data from ZENODO}"
+global root "/Volumes/ext_drive/ACDM_Data"
 cd $root 
 global processed "$root/processed"
 global temp "$root/temporary"
 global raw "$root/raw"
-global no_adapt "$root/raw/no_adapt"
-
+global objects "$root/objects"
+global figures "$root/figures"
+global NDCs  "$root/NDCs"
 
 
 
@@ -200,39 +204,12 @@ rename Adaptation_Feedback Adaptation_Feedback_noadapt
 merge 1:m year using "$processed/CAF_by_scenario.dta", gen(merge_baseline_CAF)
 
 /*
-
+graph
 */
 sort ssp rcp ssp_level year 
 twoway ///
  (line Adaptation_Feedback year if rcp=="rcp45" & ssp=="SSP2" & ssp_level=="low") ///
  (line Adaptation_Feedback_noadapt year if rcp=="rcp45" & ssp=="SSP2" & ssp_level=="low" ) , ///
 legend(order(1 "Baseline CAF (w/" "Extensive Margin)" 2 "CAF w/o"  "Extensive Margin")) ///
-ytitle("Degrees C") xtitle("Year") ///
-//note("This figure compares the CAF under an SSP2-RCP4.5 scenario when accounting for long-run" ///
-//"income growth and changes in medium-run local HDD and CDD vs. under response functions held" "constant to 2001-2010 levels.")
-
-
-
-graph export "$no_adapt/AF_no_adapt.png", as(png) name("Graph") replace
-/* 
-!$@#$!#$!@$!$@#$!#$!@$!$@#$!#$!@$
-!$@#$!#$!@$!$@#$!#$!@$!$@#$!#$!@$
-!$@#$!#$!@$!$@#$!#$!@$!$@#$!#$!@$
-!$@#$!#$!@$!$@#$!#$!@$!$@#$!#$!@$
-
-Summary stats
-
-!$@#$!#$!@$!$@#$!#$!@$!$@#$!#$!@$
-!$@#$!#$!@$!$@#$!#$!@$!$@#$!#$!@$
-!$@#$!#$!@$!$@#$!#$!@$!$@#$!#$!@$
-!$@#$!#$!@$!$@#$!#$!@$!$@#$!#$!@$
-*/
-
-
-sum Adaptation_Feedback if year==2099 & rcp=="rcp85" & ssp=="SSP2"
-//  -.1206075  
- 
-sum Adaptation_Feedback if year==2099 & rcp=="rcp45" & ssp=="SSP2"
-//   -.0713979  
-
-
+ytitle("Degrees C") xtitle("Year")
+graph export "$figures/AF_no_adapt.png", as(png) name("Graph") replace

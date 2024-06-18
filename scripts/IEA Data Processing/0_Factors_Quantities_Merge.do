@@ -16,7 +16,6 @@ Alexander Abajian
 Import IEA World Energy Balances data to create panel data on fuel-specific and broader aggregate energy consumption emissions intensities.
 
 
-Task from Kyle
 
 Using the IEA emissions intensity and world energy balances data, construct a panel dataset with the following variables:
 
@@ -38,8 +37,6 @@ F^e_{it}=\frac{\sum_{h} F^{e,h}_{it} * Q^{e,h}{it}}{Q^{e,h}{it}}
 
 where F^{e,h}{it} is the CO2 emissions intensity of energy e made from primary fuel h (from emisisons factor data) and Q^{e,h}_{it} is consumption of energy e from primary fuel h.
 
-
-
 */
 
 /*
@@ -47,16 +44,13 @@ where F^{e,h}{it} is the CO2 emissions intensity of energy e made from primary f
 %%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%
 
-Module to allow this code to be run in an adaptive nature from any terminal
+//set file paths
 
 %%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%
 */
 
-
-
-//set file paths
 cd ~/Dropbox/adaptation_multiplier_data
 	
 	
@@ -67,17 +61,6 @@ global startDir "/Users/xabajian/Dropbox/adaptation_multiplier_data"
 global rawDir "$startDir/rawData_local"
 global processedDir "$startDir/processedData_local"
 global tempDir "$startDir/temp_local"
-
-
-// //set file paths
-// global root "STARTING_CAF_DIRECTORY"
-// cd $root 
-//
-// //data folders 
-// global rawDir "$root/rawData"
-// global processedDir "$root/processedData"
-// global tempDir "$root/temp"
-
 
 
 //repository paths
@@ -104,55 +87,6 @@ I have two options here --one for the extended data file and one for the summary
 */
 
 
-/*
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-
-Old command to import the summary balances
-
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-*/
-//import delimited "$rawDir/IEA/WORLDBAL.txt", delimiters(" ", collapse) clear
-
-
-/*
-UPDATE 9/22/2021
-
-
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-
-Commands to import the extended data files
-
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-
-
-Kyle's old file
-import delimited "$rawDir/IEA/WBAL_extended_unzipped/WBIG1.TXT", delimiters(" ", collapse) clear
-
-
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%
-
-Import the two parts
-*/
-
 import delimited "$rawDir/IEA/WBIG_Unzip/WBIG1.TXT", delimiters(" ", collapse) clear
 
 
@@ -171,7 +105,6 @@ save "$tempDir/IEAWBX_1.dta", replace
 import delimited "$rawDir/IEA/WBIG_Unzip/WBIG2.TXT", delimiters(" ", collapse) clear
 
 
-**# Bookmark #1
 rename v1 Country
 rename v2 Product
 rename v3 year

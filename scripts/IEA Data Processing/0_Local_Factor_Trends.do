@@ -1,13 +1,8 @@
-
 /*
 %%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%
-
-11/5/2021
-
-
-What are country-level trends in emissions factors.
+Country-level trends in emissions factors.
 %%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%
@@ -26,17 +21,7 @@ global rawDir "$startDir/rawData_local"
 global processedDir "$startDir/processedData_local"
 global tempDir "$startDir/temp_local"
 
-
-// //set file paths
-// global root "STARTING_CAF_DIRECTORY"
-// cd $root 
-//
-// //data folders 
-// global rawDir "$root/rawData"
-// global processedDir "$root/processedData"
-// global tempDir "$root/temp"
-
-
+//read factors
 
 use "$processedDir/country_year_emissions_factor.dta", clear
 
@@ -131,13 +116,3 @@ replace trend_of1 = 0 if trend_of1>0
 
 
 save  "$processedDir/country_level_trends.dta", replace
-
-
-/*
-Rode Elec: 0.3959
-https://www.wolframalpha.com/input/?i=0.3959968320253437972496220030239758081935344517243862049103607171&assumption=%22ClashPrefs%22+-%3E+%7B%22Math%22%7D
-
-
-Rode Other: 0.1799985
-https://www.wolframalpha.com/input/?i=1000*0.05%2F277.78
-*/

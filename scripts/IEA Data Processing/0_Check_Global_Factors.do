@@ -1,13 +1,10 @@
-
 /*
 %%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%
 
-11/5/2021
+Aggregate global aggregate emissions factors
 
-
-What are global aggregate emissins factors
 %%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%
@@ -26,15 +23,7 @@ global processedDir "$startDir/processedData_local"
 global tempDir "$startDir/temp_local"
 
 
-// //set file paths
-// global root "STARTING_CAF_DIRECTORY"
-// cd $root 
-//
-// //data folders 
-// global rawDir "$root/rawData"
-// global processedDir "$root/processedData"
-// global tempDir "$root/temp"
-
+//read factors by country-year level
 
 use "$processedDir/country_year_emissions_factor.dta", clear
 

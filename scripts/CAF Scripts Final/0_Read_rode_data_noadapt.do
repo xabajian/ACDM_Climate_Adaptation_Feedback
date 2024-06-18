@@ -16,15 +16,16 @@ Each file will give one of the mean, 5 or 95th quantile across rcp/ssp/iam level
 
 
 
-
 //set file paths
-
-global root "STARTING_CAF_DIRECTORY"
+//global root "{FILEPATH INTO ACDM_Data from ZENODO}"
+global root "/Volumes/ext_drive/ACDM_Data"
 cd $root 
 global processed "$root/processed"
 global temp "$root/temporary"
 global raw "$root/raw"
-global no_adapt "$root/raw/no_adapt"
+global objects "$root/objects"
+global figures "$root/figures"
+global NDCs  "$root/NDCs"
 
 
 

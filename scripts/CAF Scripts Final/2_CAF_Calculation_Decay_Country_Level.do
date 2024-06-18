@@ -17,15 +17,18 @@ Combine to create CAF with country-level decay factors
 
 
 
-//set file paths
 
-global root "STARTING_CAF_DIRECTORY"
+
+//set file paths
+//global root "{FILEPATH INTO ACDM_Data from ZENODO}"
+global root "/Volumes/ext_drive/ACDM_Data"
 cd $root 
 global processed "$root/processed"
 global temp "$root/temporary"
 global raw "$root/raw"
+global objects "$root/objects"
 global figures "$root/figures"
-
+global NDCs  "$root/NDCs"
 
 
 /*

@@ -14,15 +14,18 @@ Decomposition exercise under SSP2-RCP85
 
 
 
-
-
 //set file paths
-
-global root "STARTING_CAF_DIRECTORY"
+//global root "{FILEPATH INTO ACDM_Data from ZENODO}"
+global root "/Volumes/ext_drive/ACDM_Data"
 cd $root 
 global processed "$root/processed"
 global temp "$root/temporary"
 global raw "$root/raw"
+global objects "$root/objects"
+global figures "$root/figures"
+global NDCs  "$root/NDCs"
+
+
 
 
 
@@ -36,7 +39,7 @@ gen factor_1 = mean_2010s_electric
 gen factor_2 = mean_2010s_otherfuels
 
 //merge these into CAF data
-drop mean_2010s_* other_elec_ratio
+//drop mean_2010s_* other_elec_ratio
 
 
 
@@ -155,7 +158,7 @@ use "$processed/damages_panel.dta",  clear
 //keep means
 keep if quantile=="mean"
 keep if ssp=="SSP2" & rcp =="rcp85" 
-drop emissions_elec_only emissions_of_only other_elec_ratio quantile ssp rcp
+drop emissions_elec_only emissions_of_only quantile ssp rcp
 
 merge m:1 ISO3 fuel using "$processed/factor_panel.dta", gen(merge_factor_decomp)
 keep if merge_factor_decomp==3
@@ -255,4 +258,4 @@ legend(order(1 "FBar" 2 "+ FEs" 3 "CAF")) ///
 title("Historical Emissions-Weighted Fbar")
 
 
-save  "$processed/decomp_panel.dta"
+save  "$processed/decomp_panel.dta", replace
