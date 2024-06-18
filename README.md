@@ -4,6 +4,9 @@ Read me file accompanying the scripts required to replicate findings in the main
 
 Replication files for the peer review responses are available from xander.abajian@gmail.com on request.
 
+## Requirements
+
+Scripts in this repository are written in a combination of Stata and R. Throughout this document, it is assumed that the replicator operates from a working directory containing all the necessary files and folders detailed in the structure below. Most importantly, a replicator must donwload the associated data repository from Zenodo.
 
 ## Requirements
 
