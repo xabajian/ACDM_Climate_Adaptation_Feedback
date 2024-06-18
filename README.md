@@ -4,19 +4,28 @@ Read me file accompanying the scripts required to replicate findings in the main
 
 Replication files for the peer review responses are available from xander.abajian@gmail.com on request.
 
-## Requirements
+## Setup
 
-Scripts in this repository are written in a combination of Stata and R. Throughout this document, it is assumed that the replicator operates from a working directory containing all the necessary files and folders detailed in the structure below. Most importantly, a replicator must donwload the associated data repository from Zenodo.
+Scripts in this repository are written in a combination of Stata and R. Throughout this document, it is assumed that the replicator operates from a working directory containing all the necessary files and folders detailed in the structure below. Most importantly, a replicator must download the associated data repository from Zenodo at [https://doi.org/10.5281/zenodo.10476310.](https://doi.org/10.5281/zenodo.10476310).
 
 ## Requirements
 
 All programs are run in the following versions of these applications:
 
 * Stata: Stata/SE 18.0 for Mac 
-* R: RStudio 2022.12.0+353
+* R: R version 4.2.3
 
-and were executed on Mac OS 14.5 (23F79).
+and were executed on Mac OS 14.5 (Sonoma -- 23F79).
 
+Running the Stata scripts requires
+
+* CROSSFOLD
+* GTOOLS
+* PALETTES
+* REGHDFE
+* FTOOLS
+* SHP2DTA
+* SPMAP 
 
 Running the R scripts requires that the following packages are installed:
 
