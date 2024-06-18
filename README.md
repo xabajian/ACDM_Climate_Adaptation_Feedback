@@ -6,7 +6,7 @@ Replication files for the peer review responses are available from xander.abajia
 
 ## Setup
 
-Scripts in this repository are written in a combination of Stata and R. Throughout this document, it is assumed that the replicator operates from a working directory containing all the necessary files and folders detailed in the structure below. Most importantly, a replicator must download the associated data repository from Zenodo at [https://doi.org/10.5281/zenodo.10476310.](https://doi.org/10.5281/zenodo.10476310). To run the Stata scripts, this folder should be set as the root directory and the global macro $root should correspond to the folder containing all files in "ACDM_Data".
+Scripts in this repository are written in a combination of Stata and R. Throughout this document, it is assumed that the replicator operates from a working directory containing all the necessary files and folders detailed in the structure below. Most importantly, a replicator must download the associated data repository from Zenodo at [https://doi.org/10.5281/zenodo.10476310.](https://doi.org/10.5281/zenodo.10476310). To run the Stata scripts, this folder should be set as the root directory and the global macro $root should correspond to the folder containing all files in "ACDM_Data". (IE,  global root "{~/ACDM_Data}" needs to be run).
 
 ## Requirements
 
