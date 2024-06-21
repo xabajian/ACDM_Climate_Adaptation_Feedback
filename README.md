@@ -27,7 +27,7 @@ Running the Stata scripts requires
 * SHP2DTA
 * SPMAP 
 
-Running the R scripts requires that the following packages are installed:
+Running the R scripts may require that the following packages are installed:
 
 * tidyverse=2.0.0
 * haven=2.5.2
