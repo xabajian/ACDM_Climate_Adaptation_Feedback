@@ -110,6 +110,18 @@ The replication scripts are separated into two folders (as suggested above): IEA
 
 The Stata scripts all contain numerical prefixes. These prefixes roughly denote the section of the analysis they are associated with. Note that not all files in our GitHub repository are used in generating the analysis for the main text — those that are marked “used” are used in the manuscript. Others are used to create portions of the supplementary information file or were used in the peer-review process
 
+# "~/IEA Data Processing"
+
+This directory contains all scripts required to process the raw IEA data into the emissions factors used in our analysis. In summary, these files create average emissions factors at the country-year-fuel level by creating a consumption-weighted average of emissions factors across each primary-fuel _r_ listed in the IEA data consumed in sectors outside of transportation. The mathmatical process amounts to solving equation (5) of our methods section many times as described in section 5.2.
+
+The dataset that these files take as an argument is proprietary. The Emissions Intensities Report from the International Energy Agency (IEA 2021 in our manuscript) is not publicly available. It is available for purchase here https://www.iea.org/data-and-statistics/data-product/emissions-factors-2021. It is our external source for We use this in tandem with the IEA's World energy balances data series (IEA 2022) . URL https://www.iea.org/data-and-statistics/data-product/892
+world-energy-balances
+
+# "~/CAF Scripts Final"
+
+This folder contains all scripts required to calculate the CAF. All the requisite emissions factors are pre-calculated and available in our Zenodo replication files. This portion does not require any files in the "IEA Data Processing" directory to have been run before hand.
+
+
 ## Section 0 — Data Processing: Files in this section read in and process all raw data we use in various portions of the paper.
 
 
