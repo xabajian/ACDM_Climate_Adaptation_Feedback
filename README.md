@@ -114,19 +114,18 @@ The Stata scripts all contain numerical prefixes. These prefixes roughly denote 
 
 This directory contains all scripts required to process the raw IEA data into the emissions factors used in our analysis. In summary, these files create average emissions factors at the country-year-fuel level by creating a consumption-weighted average of emissions factors across each primary-fuel _r_ listed in the IEA data consumed in sectors outside of transportation. The mathmatical process amounts to solving equation (5) of our methods section many times as described in section 5.2.
 
-The dataset that these files take as an argument is proprietary. The Emissions Intensities Report from the International Energy Agency (IEA 2021 in our manuscript) is not publicly available. It is available for purchase here https://www.iea.org/data-and-statistics/data-product/emissions-factors-2021. It is our external source for the emissions intensities (kgCO2 emitted per kWh of final energy produced) at the primary fuel level. We use this in tandem with the IEA's World Energy Balances data series (IEA 2022 -- https://www.iea.org/data-and-statistics/data-product/world-energy-balances) to construct our empirical measures of the consumption-weighted averages in equation (5) of our methods section.
+The dataset that these files take as an argument is proprietary. The Emissions Intensities Report (EIR) from the International Energy Agency (IEA 2021 in our manuscript) is not publicly available. It is available for purchase here https://www.iea.org/data-and-statistics/data-product/emissions-factors-2021. It is our external source for the emissions intensities (kgCO2 emitted per kWh of final energy produced) at the primary fuel level. We use this in tandem with the IEA's World Energy Balances (WEB( data series (IEA 2022 -- https://www.iea.org/data-and-statistics/data-product/world-energy-balances) to construct our empirical measures of the consumption-weighted averages in equation (5) of our methods section.
 
 
 
 ### Descriptions
 
 #### Used in Main Manuscript
- `0_product_name_crosswalks` — load impact-region level populations from Rode et al 2021
-- `0_Emissions_Factors_dofile` — solve for country-level fuel-specific average emissions factors between 2010-2018 through the process outlined in section 5.2 of the manuscript.
-- `0_Factors_Quantities_Merge` — merge fuel-specific factors and quantities each country consumes to form weighted averages (equation 5 in section 5.2)
-- `` merge fuel-specific factors and quantities each country consumes to form weighted averages (equation 5 in section 5.2)
+- `0_Emissions_Factors_dofile` — solve for country-level fuel-specific emissions factors for each year of 2010-2018 from the IEA Emissions Intensities Report Data. At times this requires a degree of dimensional analysis to get units (emissions per energy) correct. This solves for the small _f_ terms in equation 5.
+-   `0_product_name_crosswalks` — This file maps primary fuels listed as consumed in the WEB that do not have a perfect match in the EIR data. This maps each priamry fuel missing a factor into the authors' judgement of the most appropriate factor to assign to it based on what is available.
+- `0_Factors_Quantities_Merge` — Merge primary fuel-country-year specific factors into the quantities of each primary fuel consumed. These quantities are taken from the WEB dataset and represent the _omega_ terms in equation 5 in section 5.2.
+- `0_Impute_Missing_Factors'  - This file imputes missing factors for countries where insufficient data are present. The procedure is outlined in-depth in the comments of the script.
 
-0_Check_otherfuels_emissions_factors
 
 #### Note Used in Main Manuscript
 
