@@ -6,7 +6,7 @@ Replication files for the peer review responses are available from xander.abajia
 
 ## Setup
 
-Scripts in this repository are written in a combination of Stata and R. Throughout this document, it is assumed that the replicator operates from a working directory containing all the necessary files and folders detailed in the structure below. Most importantly, a replicator must download the associated data repository from Zenodo at [https://doi.org/10.5281/zenodo.10476310.](https://doi.org/10.5281/zenodo.10476310). To run the Stata scripts, this folder should be set as the root directory and the global macro $root should correspond to the folder containing all files in "ACDM_Data". (IE,  global root "{~/ACDM_Data}" needs to be run).
+Scripts in this repository are written in a combination of Stata and R. Throughout this document, it is assumed that the replicator operates from a working directory containing all the necessary files and folders detailed in the structure below. Most importantly, a replicator must download the associated data repository from Zenodo at [https://doi.org/10.5281/zenodo.10476310](https://doi.org/10.5281/zenodo.10476310). To run the Stata scripts, this folder should be set as the root directory and the global macro $root should correspond to the folder containing all files in "ACDM_Data". (IE,  global root "{~/ACDM_Data}" needs to be run).
 
 ## Requirements
 
@@ -110,19 +110,47 @@ The replication scripts are separated into two folders (as suggested above): IEA
 
 The Stata scripts all contain numerical prefixes. These prefixes roughly denote the section of the analysis they are associated with. Note that not all files in our GitHub repository are used in generating the analysis for the main text — those that are marked “used” are used in the manuscript. Others are used to create portions of the supplementary information file or were used in the peer-review process
 
+# "~/IEA Data Processing"
+
+This directory contains all scripts required to process the raw IEA data into the emissions factors used in our analysis. In summary, these files create average emissions factors at the country-year-fuel level by creating a consumption-weighted average of emissions factors across each primary-fuel _r_ listed in the IEA data consumed in sectors outside of transportation. The mathmatical process amounts to solving equation (5) of our methods section many times as described in section 5.2.
+
+The dataset that these files take as an argument is proprietary. The Emissions Intensities Report from the International Energy Agency (IEA 2021 in our manuscript) is not publicly available. It is available for purchase here https://www.iea.org/data-and-statistics/data-product/emissions-factors-2021. It is our external source for the emissions intensities (kgCO2 emitted per kWh of final energy produced) at the primary fuel level. We use this in tandem with the IEA's World Energy Balances data series (IEA 2022 -- https://www.iea.org/data-and-statistics/data-product/world-energy-balances) to construct our empirical measures of the consumption-weighted averages in equation (5) of our methods section.
+
+
+
+### Descriptions
+
+#### Used in Main Manuscript
+- `0_Emissions_Factors_dofile` — solve for country-level fuel-specific average emissions factors between 2010-2018 through the process outlined in section 5.2 of the manuscript.
+- `0_Factors_Quantities_Merge` — merge fuel-specific factors and quantities each country consumes to form weighted averages (equation 5 in section 5.2)
+-  `0_product_name_crosswalks` — load impact-region level populations from Rode et al 2021
+
+
+#### Note Used in Main Manuscript
+
+- `0_Global_Factor_Trends` — Fits a simple exponential decay model to the trends in global emissions factors for both electriicty and other fuels between 2000 and 2018. Used in the SI as well as for peer review
+- `0_Local_Factor_Trends` — Fits a simple exponential decay model to the trends in emissions factors at the country level for both electriicty and other fuels between 2000 and 2018. Used in the SI as well as for peer review
+- 
+
+
+
+# "~/CAF Scripts Final"
+
+This folder contains all scripts required to calculate the CAF. All the requisite emissions factors are pre-calculated and available in our Zenodo replication files. This portion does not require any files in the "IEA Data Processing" directory to have been run before hand.
+
+
 ## Section 0 — Data Processing: Files in this section read in and process all raw data we use in various portions of the paper.
 
 
 
-#### used
-- `0_Emissions_Factors_dofile` — solve for country-level fuel-specific average emissions factors between 2010-2018 through the process outlined in section 5.2 of the manuscript.
-- `0_Factors_Quantities_Merge` — merge fuel-specific factors and quantities each country consumes to form weighted averages (equation 5 in section 5.2)
+#### Used in Main Manuscript
+
 - `0_National_emissions_shares_2019_Minx_GHG` — load in country-level time series for emissions
 - `0_Read_IR_Populations` — load impact-region level populations from Rode et al 2021
 - `0_Read_ISO3_Populations` — load ISO3 (country) level populations from Rode et al 2021
 - `0_Read_rode_data_uncertainty` — Read in scenario level point estimates and 5-95 CIs from Rode et al for adaptive energy use under each SSP-RCP scenario we consider. This effectively fetches each element of equation (2) in the methods section we need to construct the CAF.
 
-#### unused
+#### Note Used in Main Manuscript
 - `0_Read_rode_data_uncertainty_Decay` — reformulate `0_Read_rode_data_uncertainty’ above with global decay rates for emissions factors
 - `0_Read_rode_data_uncertainty_Decay_country_level` — reformulate `0_Read_rode_data_uncertainty’ with country-level decay rates for emissions factors
 - `0_Check_otherfuels_emissions_factors` — examine the degree to which outliers/other data issues are affecting our factor values (see SI)
@@ -135,16 +163,16 @@ The Stata scripts all contain numerical prefixes. These prefixes roughly denote 
 
 ## Section 1 —  Solve for Our Modified Analogue of the TCRE that measures how historical carbon emissions have translated to changes in GMST
 
-#### used
+#### Used in Main Manuscript
 - `1_TCRE_analogue.do` — Solves for our beta on changes in cumulative carbon emissions. This performs the procedure in Methods Section 5.3 by estimating equation 6.
 
 ## Section 2 - CAF calculations and sensitivity analysis
 
-####  used
+#### Used in Main Manuscript
 - `2_CAF_Calculation` — solves for our central CAF estimates in the manuscript. Evaluates equations 3 and 4 in the methods section 5.1 given inputs as constructed above.
 - `2_CAF_Decomp` — decomposes CAF between the contributions by each fuel type to inform the graphics in Figure 3.
 
-#### unused
+#### Not Used in Main Manuscript
 - `2_CAF_Calculation_Decay` — solves for the CAF with global decay rates for each emissions factor
 - `2_CAF_Calculation_Decay_Country_Level`— solves for the CAF with local decay rates for each emissions factor
 - `2_CAF_Calculation_Decay_Country_Level_Monte_Carlo` — sensitivity analysis for emissions factors
@@ -152,14 +180,14 @@ The Stata scripts all contain numerical prefixes. These prefixes roughly denote 
 
 ## Section 3 - CAF in the context of NDCs
 
-#### used
+#### Used in Main Manuscript
 - `3_NDC_gaps` — Solves for the NDC gaps we reference in text as described in the "Baseline country-level emissions and Nationally Determined Contributions” paragraph of 5.2.
 - `3_Covariates_for_NDCgaps` — Solves for country-level covariates at various horizons to use to inform the NDC gap analysis
 - `3_Covariates_for_NDCgaps_alt` — Repeats the exercise above by fuel.
 
 ## Section 4 - Solves for the monetized value of damages using outputs from the DSCIM model
 
-#### used
+#### Used in Main Manuscript
 - `CAF_avoided_damages` — Solves for NPV of damages avoided through 2099 under all SSP-RCP scenarios
 - `integration_damage_function_coefficients` -- Damage funciton coefficients from the DSCIM model
 - `ssp2_growth` -- GDP growth under SSP2
@@ -167,7 +195,7 @@ The Stata scripts all contain numerical prefixes. These prefixes roughly denote 
   
 ## Figures
 
-#### used
+#### Used in Main Manuscript
 - `Fig1_schematic` — Figure 1
 - `figure2_cumulative_emissions` — Figure 2: Cumulative Emissions Time Series
 - `figure2_intensity_maps` —Figure 2:  Maps of emissions intensities
@@ -176,7 +204,7 @@ The Stata scripts all contain numerical prefixes. These prefixes roughly denote 
 - `figure4` — Figure 4
 
 
-#### not used
+#### Not Used in Main Manuscript
 - `figure4_alt` (SI Section 1)
 - `figure4_LOO` (SI section 5)
 
