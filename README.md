@@ -114,8 +114,7 @@ The Stata scripts all contain numerical prefixes. These prefixes roughly denote 
 
 This directory contains all scripts required to process the raw IEA data into the emissions factors used in our analysis. In summary, these files create average emissions factors at the country-year-fuel level by creating a consumption-weighted average of emissions factors across each primary-fuel _r_ listed in the IEA data consumed in sectors outside of transportation. The mathmatical process amounts to solving equation (5) of our methods section many times as described in section 5.2.
 
-The dataset that these files take as an argument is proprietary. The Emissions Intensities Report from the International Energy Agency (IEA 2021 in our manuscript) is not publicly available. It is available for purchase here https://www.iea.org/data-and-statistics/data-product/emissions-factors-2021. It is our external source for We use this in tandem with the IEA's World energy balances data series (IEA 2022) . URL https://www.iea.org/data-and-statistics/data-product/892
-world-energy-balances
+The dataset that these files take as an argument is proprietary. The Emissions Intensities Report from the International Energy Agency (IEA 2021 in our manuscript) is not publicly available. It is available for purchase here https://www.iea.org/data-and-statistics/data-product/emissions-factors-2021. It is our external source for the emissions intensities (kgCO2 emitted per kWh of final energy produced) at the primary fuel level. We use this in tandem with the IEA's World Energy Balances data series (IEA 2022 -- https://www.iea.org/data-and-statistics/data-product/world-energy-balances) to construct our empirical measures of the consumption-weighted averages in equation (5) of our methods section.
 
 # "~/CAF Scripts Final"
 
