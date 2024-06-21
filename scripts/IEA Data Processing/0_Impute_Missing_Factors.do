@@ -1423,10 +1423,9 @@ keep if merge_isocodes==3
 /*
 !@#$!@#$!#@$!@#$!@#$!#@$
 !@#$!@#$!#@$!@#$!@#$!#@$
-Step 8.1 keep the 10 countries Kyle wants spot checked
+Step 8.1 keep the  countries we want spot checked
 
 
-	UPDATE - Change these 10 countries to reflect updated imputed heat emissions factors
 !@#$!@#$!#@$!@#$!@#$!#@$
 !@#$!@#$!#@$!@#$!@#$!#@$
 */
