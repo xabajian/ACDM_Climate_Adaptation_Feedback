@@ -124,7 +124,7 @@ The dataset that these files take as an argument is proprietary. The Emissions I
 - `0_Emissions_Factors_dofile` — solve for country-level fuel-specific emissions factors for each year of 2010-2018 from the IEA Emissions Intensities Report Data. At times this requires a degree of dimensional analysis to get units (emissions per energy) correct. This solves for the small _f_ terms in equation 5.
 -   `0_product_name_crosswalks` — This file maps primary fuels listed as consumed in the WEB that do not have a perfect match in the EIR data. This maps each priamry fuel missing a factor into the authors' judgement of the most appropriate factor to assign to it based on what is available.
 - `0_Factors_Quantities_Merge` — Merge primary fuel-country-year specific factors into the quantities of each primary fuel consumed. These quantities are taken from the WEB dataset and represent the _omega_ terms in equation 5 in section 5.2.
-- `0_Impute_Missing_Factors'  - This file imputes missing factors for countries where insufficient data are present. The procedure is outlined in-depth in the comments of the script.
+- `0_Impute_Missing_Factors`  - This file imputes missing factors for countries where insufficient data are present. The procedure is outlined in-depth in the comments of the script.
 
 
 #### Note Used in Main Manuscript
