@@ -121,11 +121,12 @@ The dataset that these files take as an argument is proprietary. The Emissions I
 ### Descriptions
 
 #### Used in Main Manuscript
--  `0_product_name_crosswalks` — load impact-region level populations from Rode et al 2021
+ `0_product_name_crosswalks` — load impact-region level populations from Rode et al 2021
 - `0_Emissions_Factors_dofile` — solve for country-level fuel-specific average emissions factors between 2010-2018 through the process outlined in section 5.2 of the manuscript.
 - `0_Factors_Quantities_Merge` — merge fuel-specific factors and quantities each country consumes to form weighted averages (equation 5 in section 5.2)
+- `` merge fuel-specific factors and quantities each country consumes to form weighted averages (equation 5 in section 5.2)
 
-
+0_Check_otherfuels_emissions_factors
 
 #### Note Used in Main Manuscript
 
