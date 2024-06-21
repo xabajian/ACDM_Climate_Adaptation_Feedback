@@ -778,7 +778,6 @@ replace Country = "south sudan" if Country=="ssudan"
 replace Country = "switzerland" if Country=="switland"
 replace Country = "syrian arab republic" if Country=="syria"
 replace Country = "chinese taipei" if Country=="taipei"
-//lol
 replace Country = "united republic of tanzania" if Country=="tanzania"
 replace Country = "trinidad and tobago" if Country=="trinidad"
 replace Country = "turkmenistan" if Country=="turkmenist"
@@ -1366,17 +1365,6 @@ Duplicates in terms of Country Flow_Type Product year conversion_enduse_Sector
 
 
 
-
-/*
-!@#$!@#$!@#$
-!@#$!@#$!@#$
-save data out for kyle
-!@#$!@#$!@#$
-save "$tempDir/matched_quantities_factors.dta" , replace
-!@#$!@#$!@#$
-!@#$!@#$!@#$
-!@#$!@#$!@#$
-*/
 
 /*
 
