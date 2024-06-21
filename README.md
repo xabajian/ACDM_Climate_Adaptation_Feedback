@@ -121,16 +121,16 @@ The dataset that these files take as an argument is proprietary. The Emissions I
 ### Descriptions
 
 #### Used in Main Manuscript
+-  `0_product_name_crosswalks` — load impact-region level populations from Rode et al 2021
 - `0_Emissions_Factors_dofile` — solve for country-level fuel-specific average emissions factors between 2010-2018 through the process outlined in section 5.2 of the manuscript.
 - `0_Factors_Quantities_Merge` — merge fuel-specific factors and quantities each country consumes to form weighted averages (equation 5 in section 5.2)
--  `0_product_name_crosswalks` — load impact-region level populations from Rode et al 2021
+
 
 
 #### Note Used in Main Manuscript
 
 - `0_Global_Factor_Trends` — Fits a simple exponential decay model to the trends in global emissions factors for both electriicty and other fuels between 2000 and 2018. Used in the SI as well as for peer review
 - `0_Local_Factor_Trends` — Fits a simple exponential decay model to the trends in emissions factors at the country level for both electriicty and other fuels between 2000 and 2018. Used in the SI as well as for peer review
-- 
 
 
 
