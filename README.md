@@ -126,7 +126,7 @@ The dataset that these files take as an argument is proprietary. The Emissions I
 - `0_Impute_Missing_Factors`  - This file imputes missing factors for countries where insufficient data are present. The procedure is outlined in-depth in the comments of the script.
 
 
-#### Note Used in Main Manuscript
+#### Not Used in Main Manuscript
 
 - `0_Global_Factor_Trends` — Fits a simple exponential decay model to the trends in global emissions factors for both electriicty and other fuels between 2000 and 2018. Used in the SI as well as for peer review
 - `0_Local_Factor_Trends` — Fits a simple exponential decay model to the trends in emissions factors at the country level for both electriicty and other fuels between 2000 and 2018. Used in the SI as well as for peer review
@@ -149,7 +149,7 @@ This folder contains all scripts required to calculate the CAF. All the requisit
 - `0_Read_ISO3_Populations` — load ISO3 (country) level populations from Rode et al 2021
 - `0_Read_rode_data_uncertainty` — Read in scenario level point estimates and 5-95 CIs from Rode et al for adaptive energy use under each SSP-RCP scenario we consider. This effectively fetches each element of equation (2) in the methods section we need to construct the CAF.
 
-#### Note Used in Main Manuscript
+#### Not Used in Main Manuscript
 - `0_Read_rode_data_uncertainty_Decay` — reformulate `0_Read_rode_data_uncertainty’ above with global decay rates for emissions factors
 - `0_Read_rode_data_uncertainty_Decay_country_level` — reformulate `0_Read_rode_data_uncertainty’ with country-level decay rates for emissions factors
 - `0_Check_otherfuels_emissions_factors` — examine the degree to which outliers/other data issues are affecting our factor values (see SI)
