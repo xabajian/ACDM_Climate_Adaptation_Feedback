@@ -160,7 +160,7 @@ This folder contains all scripts required to calculate the CAF. All the requisit
 - `0_Read_rode_data_no_adapt` — alternative time series for energy demand where interacted ``extensive” adaptation margin is shut down (see SI)
 
 
-## Section 1 —  Solve for Our Modified Analogue of the TCRE that measures how historical carbon emissions have translated to changes in GMST
+## Section 1 —  Solve for our modified analog of the TCRE that measures how historical carbon emissions have translated to changes in GMST
 
 #### Used in Main Manuscript
 - `1_TCRE_analogue.do` — Solves for our beta on changes in cumulative carbon emissions. This performs the procedure in Methods Section 5.3 by estimating equation 6.
