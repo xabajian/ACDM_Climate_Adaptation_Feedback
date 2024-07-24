@@ -263,7 +263,18 @@ Directory to store intermediate files
 ## Processed
 
 
-Finished files that store the results from various procedures documented in the methods section (manuscript section 5) or the SI.
+Finished files that store the results from various procedures documented in the methods section (manuscript section 5) or the SI. 
+
+
+## Attribution 
+
+Some processed data contain excerpts of Non-Creative Commons Material as defined by the IEA (see `https://www.iea.org/terms/terms-of-use-for-non-cc-material'). All content associated with the emissions factors, products that are generated using IEA datasets, we produce are attributable to the following two sources: 
+
+IEA. Emissions factors. Tech. Rep., International Energy Agency (IEA)  (2021). URL https://www.iea.org/data-and-statistics/data-product/910
+emissions-factors-2021. All Rights Reserved.
+
+IEA. World energy balances 2021. Tech. Rep., International Energy Agency (IEA) (2022). URL https://www.iea.org/data-and-statistics/data-product/
+world-energy-balances. All Rights Reserved.
 
 
 
