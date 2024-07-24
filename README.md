@@ -270,11 +270,9 @@ Finished files that store the results from various procedures documented in the 
 
 Some processed data contain excerpts of Non-Creative Commons Material as defined by the  International Energy Agency (IEA -- see their terms of use at `https://www.iea.org/terms/terms-of-use-for-non-cc-material'). The emissions factors we use in our analysis are generated using IEA datasets. These data are aggregates of the underlying country-by-fuel level emissions factors and as presented contain only insubstantial amounts of the Non-CC Material. We attest they cannot be used to reconstruct individual data points in the original dataset. The factors we produce are attributable to the following two sources: 
 
-IEA. Emissions factors. Tech. Rep., International Energy Agency (IEA)  (2021). URL https://www.iea.org/data-and-statistics/data-product/910
-emissions-factors-2021. All Rights Reserved.
+IEA. Emissions factors. Tech. Rep., International Energy Agency (IEA)  (2021). URL https://www.iea.org/data-and-statistics/data-product/emissions-factors-2021. All Rights Reserved.
 
-IEA. World energy balances 2021. Tech. Rep., International Energy Agency (IEA) (2022). URL https://www.iea.org/data-and-statistics/data-product/
-world-energy-balances. All Rights Reserved.
+IEA. World energy balances 2021. Tech. Rep., International Energy Agency (IEA) (2022). URL https://www.iea.org/data-and-statistics/data-product/world-energy-balances. All Rights Reserved.
 
 
 
