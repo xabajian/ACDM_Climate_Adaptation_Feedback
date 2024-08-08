@@ -39,7 +39,7 @@ legend(order(1 "Electricity" 2 "Other Fuels")) ///
 ytitle("MTCO2 Emitted per kWh of Energy") ///
 xtitle("Year") ///
 //note("This figure compares trend in the global average CO2 emissions factors (MTCO2/kWh)" "from energy consumption each year between 2000-18.") 
-graph export "/Users/xabajian/Desktop/AF Ref Response/global_trends.png", as(png) name("Graph") replace
+graph export "/Users/xabajian/Desktop/AF Ref Responselobal_trends.png", as(png) name("Graph") replace
 
 
 gen ln_of = ln(otherfuels_emissions_factor) 
