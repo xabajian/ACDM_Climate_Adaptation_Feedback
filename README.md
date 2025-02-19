@@ -1,6 +1,6 @@
-# Abajian, Carleton, Meng, and Deschenes (ACMD 2024)
+# Abajian, Carleton, Meng, and Deschenes (ACMD 2025)
 
-Read me file accompanying the scripts required to replicate findings in the main text and supplementary information for “Quantifying the global climate feedback from energy-based adaptation” (ACMD 2024).
+Read me file accompanying the scripts required to replicate findings in the main text and supplementary information for “Quantifying the global climate feedback from energy-based adaptation” (ACMD 2025).
 
 Replication files for the peer review responses are available from xander.abajian@gmail.com on request.
 
