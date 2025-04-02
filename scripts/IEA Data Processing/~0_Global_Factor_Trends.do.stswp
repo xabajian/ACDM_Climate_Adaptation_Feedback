@@ -20,7 +20,7 @@ global startDir "/Users/xabajian/Dropbox/adaptation_multiplier_data"
 global rawDir "$startDir/rawData_local"
 global processedDir "$startDir/processedData_local"
 global tempDir "$startDir/temp_local"
-set scheme plotplain
+	set scheme plotplain
 
 
 //load factors
