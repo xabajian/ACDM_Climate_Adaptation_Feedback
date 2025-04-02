@@ -37,11 +37,9 @@ collapse otherfuels_emissions_factor electricity_emissions_factor [fw= country_y
 twoway (line electricity_emissions_factor year if year<2019 & year>1999) ///
  (line otherfuels_emissions_factor  year if year<2019 & year>1999), ///
 legend(order(1 "Electricity" 2 "Other Fuels")) ///
-ytitle("Normalized Emissions on a Unit Basis, MTCO{sub:2} x kWh {sup:-1}") ///
-xtitle("Year") 
-
-
-//note("This figure compares trend in the global average CO2 emissions factors (MTCO2/kWh)" "from energy consumption each year between 2000-18.") 
+ytitle("Global Emissions from Energy Use, MTCO{sub:2} x kWh {sup:-1}") ///
+xtitle("Year") ///
+//note("This figure compares trend in the gslobal average CO2 emissions factors (MTCO2/kWh)" "from energy consumption each year between 2000-18.") 
 graph export "/Users/xabajian/Desktop/AF Ref Response/global_trends.png", as(png) name("Graph") replace
 
 
